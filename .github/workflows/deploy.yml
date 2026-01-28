@@ -31,7 +31,7 @@ jobs:
             mkdir -p ~/2-tier
             cd 2-tier
             if [ ! -d ".git" ]; then
-             git clone https://github.com/${{ secrets.DOCKER_USERNAME }}/2-tier-app-nginx-reverse-progy.git
+             git clone https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ secrets.GH_USERNAME }}/2-tier-app-nginx-reverse-progy.git
             else
              git pull
             fi
